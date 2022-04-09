@@ -161,6 +161,7 @@ function Covid() {
               yaxis: {
                 title: 'Total',
               },
+              plot_bgcolor: '#e2e2e2',
               xaxis: {
                 title: 'Date',
               },
