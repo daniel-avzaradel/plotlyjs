@@ -109,7 +109,7 @@ function Covid() {
                 type: 'bar',
                 mode: 'markers',
                 marker: {
-                  color: '#001c63',
+                  color: '#00d4aa',
                 },
                 name: `Hospitalized on ventilator`,
               },
@@ -151,7 +151,7 @@ function Covid() {
                 type: 'bar',
                 mode: 'markers',
                 marker: {
-                  color: '#333',
+                  color: 'orange',
                 },
                 name: `Death change from prior day`,
               },
