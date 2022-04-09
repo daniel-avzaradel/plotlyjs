@@ -33,10 +33,36 @@ function Covid() {
             mode: 'markers',
             marker: {
               size: [60, 40, 60, 45, 30, 100],
+              color: '#0066ff',
             },
             name: 'bubble',
           },
-          { type: 'bar', name: 'bar', x: [10, 18, 31], y: [22, 15, 13] },
+          {
+            type: 'bar',
+            name: 'bar',
+            marker: {
+              color: 'orange',
+            },
+            x: [10, 18, 31],
+            y: [22, 15, 13],
+          },
+          {
+            type: 'line',
+            line: {
+              width: 4,
+              color: 'darkred',
+            },
+            name: 'line',
+            marker: {
+              color: 'darkred',
+              line: {
+                width: 4,
+                color: 'darkred',
+              },
+            },
+            x: [0, 9, 22, 36],
+            y: [0, 6, 15, 20],
+          },
         ]}
         layout={{
           width: '600px',
