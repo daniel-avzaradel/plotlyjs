@@ -34,9 +34,17 @@ function Covid() {
             marker: {
               size: [60, 40, 60, 45, 30, 100],
             },
+            name: 'bubble',
           },
+          { type: 'bar', name: 'bar', x: [10, 18, 31], y: [22, 15, 13] },
         ]}
-        layout={{ width: '600px', height: 'auto', title: 'Covid Deaths' }}
+        layout={{
+          width: '600px',
+          height: 'auto',
+          title: 'Covid Deaths',
+          yaxis: { title: 'Y Axis' },
+          xaxis: { title: 'X Axis' },
+        }}
       />
     </Box>
   );
