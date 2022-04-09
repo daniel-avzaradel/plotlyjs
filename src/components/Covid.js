@@ -20,7 +20,9 @@ function Covid() {
       <Typography variant="h6" component="h1">
         Covid-19
       </Typography>
-      {covidData ? <p>Covid-19 Data</p> : <CircularProgress disableShrink />}
+      <Box sx={{ p: '20px' }}>
+        {covidData ? <p>Covid-19 Data</p> : <CircularProgress disableShrink />}
+      </Box>
     </Box>
   );
 }
