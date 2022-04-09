@@ -158,7 +158,6 @@ function Covid() {
             ]}
             layout={{
               width: 1200,
-              height: 'auto',
               title: `Covid`,
               yaxis: {
                 title: 'Total',
@@ -169,7 +168,12 @@ function Covid() {
               margin: {
                 r: 200,
               },
+              font: {
+                size: 16,
+              },
             }}
+            useResizeHandler={true}
+            style={{ width: '100%' }}
           />
         </Box>
       ) : (
