@@ -1,12 +1,15 @@
 import ButtonAppBar from './components/ButtonAppBar';
 import Covid from './components/Covid';
+import { Box } from '@mui/system';
 
 function App() {
   return (
-    <div className="App">
+    <Box>
       <ButtonAppBar />
       <Covid />
-    </div>
+      <br />
+      <Box sx={{ p: '40px' }}>by: Daniel Avzaradel</Box>
+    </Box>
   );
 }
 
