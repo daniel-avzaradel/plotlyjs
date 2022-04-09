@@ -69,7 +69,7 @@ function Covid() {
                 marker: {
                   color: '#0066ff',
                 },
-                name: `In ICU`,
+                name: `Hospitalized in ICU`,
               },
               {
                 x: [
@@ -111,7 +111,7 @@ function Covid() {
                 marker: {
                   color: '#001c63',
                 },
-                name: `On ventilator`,
+                name: `Hospitalized on ventilator`,
               },
               {
                 x: [
@@ -157,7 +157,6 @@ function Covid() {
               },
             ]}
             layout={{
-              width: 1200,
               title: `Covid`,
               yaxis: {
                 title: 'Total',
@@ -165,15 +164,12 @@ function Covid() {
               xaxis: {
                 title: 'Date',
               },
-              margin: {
-                r: 200,
-              },
               font: {
                 size: 16,
               },
             }}
             useResizeHandler={true}
-            style={{ width: '100%' }}
+            style={{ width: '90vw' }}
           />
         </Box>
       ) : (
