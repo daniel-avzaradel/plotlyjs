@@ -25,53 +25,156 @@ function Covid() {
       <Box>Link: {covidData ? covidData.links.self : <LinearProgress />}</Box>
       <br />
       <br />
-      <Plot
-        data={[
-          {
-            x: [1, 13, 2, 5.4, 6, 9, 18],
-            y: [2, 4, 1.2, 12, 6, 9],
-            mode: 'markers',
-            marker: {
-              size: [60, 40, 60, 45, 30, 100],
-              color: '#0066ff',
-            },
-            name: 'bubble',
-          },
-          {
-            type: 'bar',
-            name: 'bar',
-            marker: {
-              color: 'orange',
-            },
-            x: [10, 18, 31],
-            y: [22, 15, 13],
-          },
-          {
-            type: 'line',
-            line: {
-              width: 4,
-              color: 'darkred',
-            },
-            name: 'line',
-            marker: {
-              color: 'darkred',
-              line: {
-                width: 4,
-                color: 'darkred',
+      {covidData ? (
+        <Box sx={{ border: '2px solid black' }}>
+          <Plot
+            data={[
+              {
+                x: [
+                  covidData.data[0].date,
+                  covidData.data[1].date,
+                  covidData.data[2].date,
+                  covidData.data[3].date,
+                  covidData.data[4].date,
+                  covidData.data[5].date,
+                  covidData.data[6].date,
+                  covidData.data[7].date,
+                  covidData.data[8].date,
+                  covidData.data[9].date,
+                ],
+                y: [
+                  covidData.data[0].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[1].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[2].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[3].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[4].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[5].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[6].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[7].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[8].outcomes.hospitalized.in_icu.currently
+                    .value,
+                  covidData.data[9].outcomes.hospitalized.in_icu.currently
+                    .value,
+                ],
+                type: 'bar',
+                mode: 'markers',
+                marker: {
+                  color: '#0066ff',
+                },
+                name: `In ICU`,
               },
-            },
-            x: [0, 9, 22, 36],
-            y: [0, 6, 15, 20],
-          },
-        ]}
-        layout={{
-          width: '600px',
-          height: 'auto',
-          title: 'Covid Deaths',
-          yaxis: { title: 'Y Axis' },
-          xaxis: { title: 'X Axis' },
-        }}
-      />
+              {
+                x: [
+                  covidData.data[0].date,
+                  covidData.data[1].date,
+                  covidData.data[2].date,
+                  covidData.data[3].date,
+                  covidData.data[4].date,
+                  covidData.data[5].date,
+                  covidData.data[6].date,
+                  covidData.data[7].date,
+                  covidData.data[8].date,
+                  covidData.data[9].date,
+                ],
+                y: [
+                  covidData.data[0].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[1].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[2].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[3].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[4].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[5].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[6].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[7].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[8].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                  covidData.data[9].outcomes.hospitalized.on_ventilator
+                    .currently.value,
+                ],
+                type: 'bar',
+                mode: 'markers',
+                marker: {
+                  color: '#001c63',
+                },
+                name: `On ventilator`,
+              },
+              {
+                x: [
+                  covidData.data[0].date,
+                  covidData.data[1].date,
+                  covidData.data[2].date,
+                  covidData.data[3].date,
+                  covidData.data[4].date,
+                  covidData.data[5].date,
+                  covidData.data[6].date,
+                  covidData.data[7].date,
+                  covidData.data[8].date,
+                  covidData.data[9].date,
+                ],
+                y: [
+                  covidData.data[0].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[1].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[2].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[3].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[4].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[5].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[6].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[7].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[8].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                  covidData.data[9].outcomes.death.total.calculated
+                    .change_from_prior_day,
+                ],
+                type: 'bar',
+                mode: 'markers',
+                marker: {
+                  color: '#333',
+                },
+                name: `Death change from prior day`,
+              },
+            ]}
+            layout={{
+              width: 1200,
+              height: 'auto',
+              title: `Covid`,
+              yaxis: {
+                title: 'Total',
+              },
+              xaxis: {
+                title: 'Date',
+              },
+              margin: {
+                r: 200,
+              },
+            }}
+          />
+        </Box>
+      ) : (
+        ''
+      )}
     </Box>
   );
 }
