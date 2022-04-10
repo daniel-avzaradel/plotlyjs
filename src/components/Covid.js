@@ -1,24 +1,15 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import { Box, Typography } from '@mui/material';
 import LinearProgress from '@mui/material/LinearProgress';
 import Plot from 'react-plotly.js';
 
-function Covid() {
-  const [covidData, setCovidData] = useState();
+function Covid(props) {
+  const { covidData } = props;
+  console.log(covidData);
 
-  useEffect(() => {
-    fetch('https://api.covidtracking.com/v2/us/daily.json')
-      .then((res) => res.json())
-      .then((data) => {
-        setCovidData(data);
-        console.log(data);
-      });
-
-    console.log(covidData);
-  }, []);
   return (
     <Box sx={{ p: '40px' }}>
-      <Typography variant="h5" component="h1">
+      <Typography variant='h5' component='h1'>
         Covid-19
       </Typography>
       <br />
@@ -26,7 +17,7 @@ function Covid() {
       <br />
       <br />
       {covidData ? (
-        <Box sx={{ border: '2px solid black' }}>
+        <Box>
           <Plot
             data={[
               {
